@@ -1,0 +1,77 @@
+YAML is a data serialization language and format is in key-value pair
+1. YAML is a popular programming language because it is human-readable and easy to understand. 
+2. YAML is also a superset of JSON
+3. indentation is most important in YAML.
+
+
+course:
+  course_name: "node.js backend developer"
+  # course_name: node.js backend developer  -- this is also consider as a string
+  version: 16.16.0
+  price: 200
+  is_public: True
+  release_date: 2022-08-16   12:23:22
+
+
+# 1. array
+
+# Collection sequence data types in aaray
+- One
+- two
+- Three
+
+  # another way of sequence  syntax in array
+[one, two , three]
+
+
+foods:
+  - Apple
+  - Orange
+  - Strawberry
+  - Mango
+# or
+food: ["Apple", "Orange", "Strawberry", "Mango"]
+
+
+# [{}, {}, {}]
+user_details: 
+  - name: "rohan"
+    emaail: "rohan@gmail.com"
+    role: "frontent developer"
+  - name: "shubham"
+    email: "shubham@gmail.com"
+    role: "developer"
+  - {name: "rohan", emaail: "rohan@gmail.com", role: "frontent developer"}
+
+
+
+# 2. description
+description: this is a yaml beginner course 
+
+description: >
+  this is a description
+
+
+long_desc: |
+  this is a yaml 
+  beginner course
+  it's easy to understand |
+
+
+# 3. variables
+ price: &myprice 200  # my price is a variable name 
+
+
+# 4. dependencies
+dependencies:
+  yaml: ^3.1.0
+  yaml_writer: 1.0.1
+
+
+
+# 5. Multiline string with literal block syntax -preserved new lines
+string1: |
+  Line1 
+  line2
+  "line3"   
+  line4

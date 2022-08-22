@@ -1,0 +1,36 @@
+{
+    "name": "Add Patch Transition",
+    "request": {
+        "method": "POST",
+        "header": [
+            {
+                "key": "Authorization",
+                "value": "{{TOKEN}}",
+                "type": "text"
+            }
+        ],
+        "body": {
+            "mode": "raw",
+            "raw": "{\n    \"type\":\"SPO2\",\n    \"value\": 96,\n    \"time\":{{$timestamp}}    \n}",
+            "options": {
+                "raw": {
+                    "language": "json"
+                }
+            }
+        },
+        "url": {
+            "raw": "{{URL}}/api/v1/resources/patients/add-event",
+            "host": [
+                "{{URL}}"
+            ],
+            "path": [
+                "api",
+                "v1",
+                "resources",
+                "patients",
+                "add-event"
+            ]
+        }
+    },
+    "response": []
+}
